@@ -571,7 +571,8 @@ Report Creation:
 <br>
 <br>
 
-![image](https://github.com/SubashiniMahadevan/FashionSales-Excel-Microsoft-SSMS-POWERBI/assets/168095179/838691b6-eef7-4e4a-830b-85c7ba503b03)
+![image](https://github.com/SubashiniMahadevan/FashionSales-Excel-Microsoft-SSMS-POWERBI/assets/168095179/dface7d3-99ab-4fe7-9234-46c95923037e)
+
 
 
 
