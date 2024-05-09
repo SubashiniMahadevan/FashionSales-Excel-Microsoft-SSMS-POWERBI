@@ -109,7 +109,7 @@ SELECT TOP 5 CONCAT('$', CAST(MAX(s.discount_value) AS VARCHAR(30))) AS discount
 SELECT TOP 10 CONCAT('$', CAST(MIN(s.discount_value) AS VARCHAR(30))) AS discount,p.product_name FROM sales s INNER JOIN product p ON s.product_id=p.product_id  GROUP BY p.product_name ORDER BY discount ASC;
 
 -- Highly rated Product and Its full details including delivery details
-SELECT MAX(s.review_rating) AS highly_rated_product, p.product_name,s.shipping_type FROM sales s INNER JOIN product p On s.product_id=s.product_id GROUP BY p.product_name,s.shipping_type ORDER BY highly_rated_product DESC;
+SELECT MAX(s.review_rating) AS highly_rated_product, p.product_name,AVG(s.purchase_amount) AS amount,s.shipping_type FROM sales s INNER JOIN product p On s.product_id=s.product_id GROUP BY p.product_name,s.shipping_type ORDER BY product_name;
 
 --Customers details with previous purchases
 
@@ -123,6 +123,19 @@ SELECT TOP 10 COUNT(s.product_id) As product_count,p.product_name,p.color FROM s
 
 SELECT TOP 5 COUNT(s.product_id) As product_count,p.product_name,p.color FROM sales s INNER JOIN product p ON s.product_id=p.product_id WHERE p.product_name='jacket' GROUP BY p.product_name,p.color ORDER BY product_count DESC ;
 
+-- Colors sold in Clothing - TOP 5 Products
+
+SELECT TOP 5 COUNT(s.product_id) As product_count,p.product_name,p.color FROM sales s INNER JOIN product p ON s.product_id=p.product_id WHERE p.product_name='Shirt' GROUP BY p.product_name,p.color ORDER BY product_count DESC ;
+SELECT TOP 5 COUNT(s.product_id) As product_count,p.product_name,p.color FROM sales s INNER JOIN product p ON s.product_id=p.product_id WHERE p.product_name='Pants' GROUP BY p.product_name,p.color ORDER BY product_count DESC ;
+SELECT TOP 5 COUNT(s.product_id) As product_count,p.product_name,p.color FROM sales s INNER JOIN product p ON s.product_id=p.product_id WHERE p.product_name='Sweater' GROUP BY p.product_name,p.color ORDER BY product_count DESC ;
+SELECT TOP 5 COUNT(s.product_id) As product_count,p.product_name,p.color FROM sales s INNER JOIN product p ON s.product_id=p.product_id WHERE p.product_name='Blouse' GROUP BY p.product_name,p.color ORDER BY product_count DESC ;
+SELECT TOP 5 COUNT(s.product_id) As product_count,p.product_name,p.color FROM sales s INNER JOIN product p ON s.product_id=p.product_id WHERE p.product_name='Dress' GROUP BY p.product_name,p.color ORDER BY product_count DESC ;
 
 
+--Colors Sold in Accessories - TOP 5 Products
 
+SELECT TOP 5 COUNT(s.product_id) As product_count,p.product_name,p.color FROM sales s INNER JOIN product p ON s.product_id=p.product_id WHERE p.product_name='Jewelry' GROUP BY p.product_name,p.color ORDER BY product_count DESC ;
+SELECT TOP 5 COUNT(s.product_id) As product_count,p.product_name,p.color FROM sales s INNER JOIN product p ON s.product_id=p.product_id WHERE p.product_name='Sunglasses' GROUP BY p.product_name,p.color ORDER BY product_count DESC ;
+SELECT TOP 5 COUNT(s.product_id) As product_count,p.product_name,p.color FROM sales s INNER JOIN product p ON s.product_id=p.product_id WHERE p.product_name='Scarf' GROUP BY p.product_name,p.color ORDER BY product_count DESC ;
+SELECT TOP 5 COUNT(s.product_id) As product_count,p.product_name,p.color FROM sales s INNER JOIN product p ON s.product_id=p.product_id WHERE p.product_name='Belt' GROUP BY p.product_name,p.color ORDER BY product_count DESC ;
+SELECT TOP 5 COUNT(s.product_id) As product_count,p.product_name,p.color FROM sales s INNER JOIN product p ON s.product_id=p.product_id WHERE p.product_name='Hat' GROUP BY p.product_name,p.color ORDER BY product_count DESC ;
