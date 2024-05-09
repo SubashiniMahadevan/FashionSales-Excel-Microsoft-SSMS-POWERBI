@@ -560,8 +560,14 @@ Report Creation:
 - Create another tree map to display the Top 5 Products sold in Accessories category.
 - Create a Visualization to display the Top 10 Producst By Cost
 - Create Funnel chart to visualize Total Sales by category.
-- Apply the seeting to include a Background image.
-  
+- Create a Card to display the Total Discount Value for year 2023.
+- Display the trend of the sales for every season in a Line Graph.
+- Top 10 Products Sold Without Discount throughout the year.
+- Create a Table to list the Highly Rated Product names, their average price and shipping method.
+- Pie Graph to show Percentage contribution of Each Shipping method to the total.
+- Include a Background image.
+- Bar Graph to display the Top 5 Products Sold in Clothing and Accessories Category and their colors(5 colors and its sales in %).
+- Short Summary about the Findings in the report
 
 <br>
 <br>
@@ -571,7 +577,12 @@ Report Creation:
 <br>
 <br>
 
-![image](https://github.com/SubashiniMahadevan/FashionSales-Excel-Microsoft-SSMS-POWERBI/assets/168095179/dface7d3-99ab-4fe7-9234-46c95923037e)
+![image](https://github.com/SubashiniMahadevan/FashionSales-Excel-Microsoft-SSMS-POWERBI/assets/168095179/05c427dc-9bc2-42ad-974b-e79d99b94369)
+<br>
+<br>
+
+![image](https://github.com/SubashiniMahadevan/FashionSales-Excel-Microsoft-SSMS-POWERBI/assets/168095179/ae25ddc5-0b7b-4463-888f-26aff8d9c09d)
+
 
 
 
